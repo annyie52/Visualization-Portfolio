@@ -12,3 +12,9 @@ def purpose(request):
         request,
         'single_pages/purpose.html'
     )
+
+def review(request):
+    return render(
+        request,
+        'single_pages/review.html'
+    )

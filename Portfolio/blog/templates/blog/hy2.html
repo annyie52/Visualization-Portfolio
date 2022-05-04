@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가설 2</title>
+</head>
+<body>
+    <nav>
+        <a href="/analyze/">분석 목록</a>
+    </nav>
+
+    <h2>
+        가설2 : 인구 인동량과 확진자 수는 서로 연관이 있을 것이다.
+    </h2>
+    <hr>
+
+    <style>
+        h2{color: white; background-color: black;
+        }
+    </style>
+
+    <h3>데이터 수집</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+
+    <ul>
+        <li><b>데이터 출처:</b></li>
+            <ul>
+                <li>통계데이터센터의 통신모바일 인구이동량 통계 데이터</li>
+                <li>서울열린데이터광장의 서울시 코로나19 확진자 발생동향 데이터</li>
+            </ul>
+        <li><b>데이터 형태:</b>xlsx, csv</li>
+        <li><b>데이터 크기:</b>2,291 KB, 126 KB</li>
+        <li><b>사용할 데이터 범위</b></li>
+            <ul>
+                <li>인구 이동량 데이터</li>
+            </ul>
+                <ul>
+                    <li>지역은 4번째 표인 “4.표_시도” 에서 서울특별시, 6 광역시의 데이터만 사용</li>
+                    <li>날짜는 주간 데이터 사용</li>
+                </ul>
+            <ul>
+                <li>확진자 발생동향 데이터</li>
+            </ul>
+                <ul>
+                    <li>전국 누적 확진자수 데이터를 주간 확진자수로 가공하여 사용</li>
+                </ul>
+        <li><b>데이터 수집 & 데이터 분석 시스템 구축:</b> Colab Notebook</li>
+        <li><b>시각화 툴:</b> Matplotlib</li>
+    </ul>
+
+    </br>
+    </br>
+    </br>
+
+    <h3>분석 결과</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+    <h4><a href="https://github.com/Dplatina/TIL/blob/master/%EC%9D%B4%EB%8F%99%EB%8D%B0%EC%9D%B4%ED%84%B0_%EB%B6%84%EC%84%9D.ipynb">python 코드</a></h4>
+
+    {% load static %}
+    <div style="text-align : center;">
+        <img src="{% static 'hy2_1.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">인구 이동량과 확진자수의 상관관계를 나타낸 산점도 그래프</span></p>
+    </div>
+
+    </br>
+    </br>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy2_2.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">인구 이동량 증감률과 확진자수의 상관관계를 나타낸 산점도 그래프</span></p>
+    </div>
+
+    </br>
+    </br>
+    <ul>
+        <li>오미크론 데이터를 포함하여 이동량(증감율) 데이터와 확진자 수의 데이터를 비교하여 상관계수를 계산해낸 결과, 굉장히 낮은 상관계수가 도출된다.</li>
+        <li>그러나, 오미크론 이후 확진자의 수는 이전까지의 데이터의 변화량을 무의미하게 만들 정도로 큰 데이터이며, 전염성은 높은 것에 비해 치사율과 낮고 증상이 비교적 약한 것을 감안하여 정부에서 사회적 거리두기 완화 등의 정책을 시행하여 데이터 분석을 오미크론 전으로 분석해야 한다고 판단된다.</li>
+        <li><b>오미크론 미포함 데이터로 비교 시</b>, 상관계수가 크게 증가했으나 ‘0.3265’의 상관계수는 낮은 수치이다. 따라서 <b>확진자 수와 이동량(증감율) 데이터 사이의 연관성은 낮다</b>고 판단 가능하다.</li>
+        <li><b><span style="background-color: yellow;">가설 검증: 가설이 틀림. 오미크론 이전 증감율과 확진자 사이에는 낮은 연관성이 존재하나, 그 외의 지표에서는 연관성이 존재하지 않는다고 판단 가능.</span></b></li>
+    </ul>
+
+    </br>
+    </br>
+    </br>
+
+
+</body>
+</html>

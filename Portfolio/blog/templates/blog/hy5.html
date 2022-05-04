@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가설 5</title>
+</head>
+<body>
+
+    <nav>
+        <a href="/analyze/">분석 목록</a>
+    </nav>
+
+    <h2>
+        가설5 : 거리두기 시행 이후 사람들의 정신 건강도 악화되었을 것이다.
+    </h2>
+    <hr>
+
+    <style>
+        h2{color: white; background-color: black;
+        }
+    </style>
+
+    <h3>데이터 수집</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+
+    <ul>
+        <li><b>데이터 출처:</b></li>
+            <ul>
+                <li>보건의료빅데이터개방시스템의 정신건강검사결과 데이터 사용</li>
+                <li>카카오데이터트렌드에서 제공하는 상대량 데이터 사용</li>
+            </ul>
+                <ul>
+                    <li>json(크롤링) 형태로 수집해서 드라이브에 저장</li>
+                </ul>
+        <li><b>데이터 형태:</b>xlsx,  json 비동기 통신 형식</li>
+        <li><b>데이터 크기:</b>43 KB</li>
+        <li><b>사용할 데이터 범위</b></li>
+            <ul>
+                <li>정신건강 검사결과 데이터</li>
+            </ul>
+                <ul>
+                    <li>년도별, 성별, 연령대별 우울증 환자 수 데이터 사용</li>
+                </ul>
+        <li><b>데이터 수집 & 데이터 분석 시스템 구축:</b> Colab Notebook</li>
+        <li><b>시각화 툴:</b> Matplotlib</li>
+    </ul>
+
+    </br>
+    </br>
+    </br>
+
+    <h3>분석 결과</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+    <h4><a href="https://github.com/annyie52/Data-Analyze/blob/master/%EA%B1%B0%EB%A6%AC%EB%91%90%EA%B8%B0%EC%99%80_%EA%B0%9C%EC%9D%B8%EC%9D%98_%EC%8B%AC%EB%A6%AC_%EC%83%81%ED%83%9C_%EB%B6%84%EC%84%9D.ipynb">python 코드</a></h4>
+    <p><span style="background-color: orange;">우울증 환자수 증가 추이</span></p>
+
+    {% load static %}
+    <div style="text-align : center;">
+        <img src="{% static 'hy5_1.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">코로나로 인한 일상의 체감 변함 정도</span></p>
+    </div>
+
+    </br>
+    </br>
+
+    <ul>
+        <li><b>우울증 환자 수</b>는 <b>꾸준히 증가</b>하는 것을 확인할 수 있다.</li>
+        <li>남성 우울증 환자보다 <b>여성의 우울증 환자 수가 높다.</b></li>
+    </ul>
+
+    </br>
+    <blockquote><span><b>중앙 일보: </b></span> "전문가들은 <b>여성들이 우울증에 더 잘 걸리는 이유를 여러가지로 해석</b>하고 있는데 여성의 생식 주기에 따른 호르몬의 변화, 소극적이고 비관적인 성격 상의 문제, 결혼과 육아의 이중 부담, 높은 빈도의 성적˙육체적 학대, 낮은 사회적 성취도, 사회적 지위 등을 대표적으로 꼽는다."</blockquote>
+
+    </br>
+
+    <p><b>거리두기 시행 이후 우울함을 느끼는 사람들의 연령대가 달라졌을까?</b></p>
+    </br>
+    </br>
+    <p><span style="background-color: orange;">거리두기 시행 여부에 따른 연령대별 우울증 환자수</span></p>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy5_2.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">거리두기 시행 여부에 따른 연령대별 우울증 환자 수 </span></p>
+    </div>
+    <ul>
+        <li><b>20대 우울증 환자 증가율</b>이 <b>높은 것을 확인</b>할 수 있다.</li>
+        <blockquote><span><b>백종우 경희대 의대 정신건강의학과 교수: </b></span>“코로나19 사태 이후 20대 우울증 환자 급증은 한국뿐만 아니라 세계적으로 나타나는 현상”이라며 “다른 연령대와 달리 <b>미래가 불확실한 상황에서, 취업난·실직 위험·경제적 어려움</b> 등이 커진 것에 20대가 받는 정신적인 충격이 크다”라고 짚었다. 백종우 교수는 이어 “<b>한창 활동할 나이에 사회적 거리두기</b> 등에 따라 <b>주변 사람들과 교류가 적어지고, 여가·취미활동 등으로 스트레스를 풀 기회가 적어진 것도 한 원인</b>”이라며 “20대가 타인과 연결감을 느끼고, 자신은 보살핌을 받고 있다는 경험을 갖도록 맞춤형 지원을 할 필요가 있다”</blockquote>
+    </ul>
+    </br>
+
+    <p><b>우울증을 느끼는 사람이 많아졌으면 우울증 관련된 키워드를 검색한 사람도 많을까?</b></p>
+    </br>
+    </br>
+    <p><span style="background-color: orange;">‘우울증’ 과 ‘자살’ 키워드 검색량 변화 추이 비교</span></p>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy5_3.png' %}">
+    </div>
+
+    </br>
+    </br>
+
+    <ul>
+        <li>우울증 키워드 하나만 봤을 때는 거리두기 이후에 우울증 환자가 많아졌음에도 검색량이 줄어들은 것을 알 수 있다.</li>
+    </ul>
+
+    <blockquote><span><b>삼성서울병원 전홍진 교수: </b></span>"자살 원인의 가장 큰 원인으로 지목되는 것이 바로 우울증"</blockquote>
+
+
+    <ul>
+        <li>우울증과 가장 많이 연관되는 부정적인 단어인 자살 검색량을 봤을 때는 우울증 키워드 하나만 봤을 때보다는 검색량이 유의미한 결과를 갖고 있지만 <b>증가한 우울증 환자들의 수를 검색량이 대변할 수 있지는 않다.</b></li>
+    </ul>
+
+    </br>
+    </br>
+    <ul>
+        <li>결론</li>
+        <ul>
+            <li>정부 차원에서 우울증을 진단하기 위해서는 단순히 우울이라는 단어를 쓰는 것만 아니라 부정적인 단어로 진단해야 된다.</li>
+            <p>실제로 우울증 자가 진단 항목에 우울이라는 단어가 포함된 항목보다 다양한 분야에서 겪을 수 있는 좌절, 부정적인 감정 등이 포함된 항목이 많다.</p>
+            <li>그래도 <b>검색량을 부시할 수는 없으니</b>, 부정적인 단어를 검색했을 때 긍정적인 메시지가 같이 나오도록, 혹은 병원에서 진료를 받으면 된다는 <b>긍정적인 인식을 심어 줘야 된다.</b></li>
+        </ul>
+
+    </ul>
+
+
+    </br>
+    </br>
+    </br>
+
+
+</body>
+</html>

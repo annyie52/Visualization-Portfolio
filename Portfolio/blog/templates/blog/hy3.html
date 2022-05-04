@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가설 3</title>
+</head>
+<body>
+    <nav>
+        <a href="/analyze/">분석 목록</a>
+    </nav>
+
+    <h2>
+        가설3 : 사람들은 코로나로 인해 일상의 많은 부분이 바뀌었다고 느낄 것이다.
+    </h2>
+    <hr>
+
+    <style>
+        h2{color: white; background-color: black;
+        }
+    </style>
+
+    <h3>데이터 수집</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+
+    <ul>
+        <li><b>데이터 출처:</b>한국노동패널조사 23차(2020년) 코로나 관련 부록 설문 중 코로나 19로 인한 생활 및 인식 변화 데이터</li>
+        <li><b>데이터 형태:</b>csv</li>
+        <li><b>데이터 크기:</b>1277.1 KB</li>
+        <li><b>사용할 데이터 범위</b></li>
+            <ul>
+                <li>이전과 달라진 일상 설문조사 데이터만 사용</li>
+            </ul>
+        <li><b>데이터 수집 & 데이터 분석 시스템 구축:</b> Colab Notebook</li>
+        <li><b>시각화 툴:</b> Matplotlib</li>
+    </ul>
+
+    </br>
+    </br>
+    </br>
+
+    <h3>분석 결과</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+    <h4><a href="https://github.com/annyie52/Data-Analyze/blob/master/%EC%BD%94%EB%A1%9C%EB%82%98%EC%99%80_%EA%B2%BD%EC%A0%9C_%EC%8B%AC%EB%A6%AC_%EC%A7%80%EC%88%98%EC%99%80%EC%9D%98_%EA%B4%80%EA%B3%84.ipynb">python 코드</a></h4>
+
+    {% load static %}
+    <div style="text-align : center;">
+        <img src="{% static 'hy3_1.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">코로나로 인한 일상의 체감 변함 정도</span></p>
+    </div>
+
+    </br>
+    </br>
+
+    <ul>
+        <li>사람들은 <b>대부분의 일상 목록</b>에서 <b>변화를 체감</b>했다.</li>
+        <li>거리두기 정책의 영향으로 사람들과 접촉하거나 밖으로 나가는 가족이나 친구들과의 <b>모임, 여행 부분이 체감 변함 정도가 가장 큰것을 확인</b>할 수 있다.</li>
+        <li>영화/공연/전시회 관람, 종교활동 등 외출이 필요하거나 타인과 만나는 것에 대해서는 코로나 이후에 줄었다고 느끼고 있다.</li>
+        <li>사람들은 집에서 하는 자녀 돌보기, 가사 활동, 장소에 구애받지 않는 디지털 기기 사용은 코로나 이후에 평소보다 늘어났다고 생각한다.</li>
+        <li><b><span style="background-color: yellow;">가설 검증 : 가설과 일치한다.</span></b></li>
+    </ul>
+    </br>
+
+    <h4 style="text-align : center;"><span style="color:navy;">그렇다면 사람들은 당연하게 누렸던 일상들이 달라짐에 따라 어떤 부분을 얼마나 걱정할까?</span></h4>
+
+    </br>
+    </br>
+    </br>
+</body>
+</html>

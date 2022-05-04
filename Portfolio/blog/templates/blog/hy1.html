@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가설 1</title>
+</head>
+<body>
+    <nav>
+        <a href="/analyze/">분석 목록</a>
+    </nav>
+
+    <h2>
+        가설1 : 인구 인동량과 사회적 거리두기는 서로 연관이 있을 것이다.
+    </h2>
+    <hr>
+
+    <style>
+        h2{color: white; background-color: black;
+        }
+    </style>
+
+    <h3>데이터 수집</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+
+    <ul>
+        <li><b>데이터 출처:</b> 통계데이터센터의 통신 모바일 인구 이동량 통계 데이터</li>
+        <li><b>데이터 형태:</b> xlsx</li>
+        <li><b>데이터 크기:</b> 2,291 KB</li>
+        <li><b>사용할 데이터 범위</b></li>
+            <ul>
+                <li>지역은 4번째 표인 “4.표_시도” 에서 서울특별시, 6 광역시의 데이터만 사용</li>
+                <li>날짜는 사회적 거리두기 시행 전(2020.03 1주차) 이전, 시행 중, 시행 해제(2022.04 3주차)의 3구간으로 나누어 사용</li>
+                <li>증감률 그래프는 구간을 나누지 않고 모든 주차 사용</li>
+            </ul>
+        <li><b>데이터 수집 & 데이터 분석 시스템 구축:</b> Colab Notebook</li>
+        <li><b>시각화 툴:</b> Matplotlib</li>
+    </ul>
+
+    </br>
+    </br>
+    </br>
+
+    <h3>분석 결과</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+    <h4><a href="https://github.com/Dplatina/TIL/blob/master/%EC%9D%B4%EB%8F%99%EB%8D%B0%EC%9D%B4%ED%84%B0_%EB%B6%84%EC%84%9D.ipynb">python 코드</a></h4>
+    <p><span style="background-color: yellow;">지역은 서울 및 광역시(부산, 대구, 인천, 광주, 대전, 울산)로 한정해서 분석을 진행했다.</span></p>
+
+    {% load static %}
+    <div style="text-align : center;">
+        <img src="{% static 'hy1_1.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">순서대로 서울. 윗줄이 부산, 대구, 인천. 두번째 줄이 광주, 대전, 울산.</span></p>
+    </div>
+
+    </br>
+    </br>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy1_2.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">지역별 시행이전, 시행중, 시행이후를 나타낸 표</span></p>
+    </div>
+
+    </br>
+    </br>
+    <ul>
+        <li><b>대부분의 그래프</b>가 <b>V형태</b>를 그리고 있는 것으로 보아 <b>사회적 거리두기 시행 및 해제는 이동량에 명확한 영향을 미쳤다</b>고 판단 가능하다.</li>
+        <li>울산의 경우 산업도시라 사회적 거리두기와 크게 연관이 없었을 것으로 예상된다.</li>
+        <li><b><span style="background-color: yellow;">가설 검증: 가설과 일치한다.</span></b></li>
+    </ul>
+
+    </br>
+    </br>
+
+    <p><span style="background-color: orange;">각 지역의 전년도 대비 주별 증감률을 확인해 보면</span></p>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy1_3.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">7개 지역의 전년도 대비 주별 증감률 그래프 (2020.01 1주차~ 2022.04 3주차)</span></p>
+    </div>
+
+    </br>
+    </br>
+    <ul>
+        <li>2020.03 1주차: 대구 집단감염 및 사회적 거리두기 시행으로 인해 큰 감소율을 보이며, 특히 대구에서 최소치를 관측 가능.</li>
+        <li>2021.02 4주차: 비수도권 사회적 거리두기 완화가 2주차쯤 시행되었으며, 3주차를 넘어서 수도권까지 사회적 거리두기가 완화됨으로 인해 서서히 증가하여 4주차에 최고점을 찍은 것을 관찰 가능.</li>
+        <li>두 주차 사이의 <b>사회적 거리두기 시행 기간 동안</b>에 평균적으로 <b>작년에 비해 이동량이 감소한 것을 확인</b>할 수 있다. 따라서 사회적 거리두기가 이동량 증감률과 연관이 있다고 판단할 수 있다.</li>
+        <li><b><span style="background-color: yellow;">가설 검증: 가설과 일부 일치하나, 예상 결과(사회적 거리두기 실시→ 이동량 확연히 감소, 해제→이동량 확연히 증가)와는 다른 특이점이 관측된다. ‘사회적 거리두기 실시→ 이동량 최저’ 까지는 가설과 일치하나 거리두기 해제가 아닌 완화시기에 이동량이 확연히 증가하였다.</span></b></li>
+    </ul>
+
+    </br>
+    </br>
+
+</body>
+</html>

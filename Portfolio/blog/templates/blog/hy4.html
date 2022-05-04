@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가설 4</title>
+</head>
+<body>
+    <nav>
+        <a href="/analyze/">분석 목록</a>
+    </nav>
+
+    <h2>
+        가설4 : 사람들은 코로나로 인해 달라진 자신의 경제 상황에 대해 걱정할 것이다.
+    </h2>
+    <hr>
+
+    <style>
+        h2{color: white; background-color: black;
+        }
+    </style>
+
+    <h3>데이터 수집</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+
+    <ul>
+        <li><b>데이터 출처:</b>한국노동패널조사 23차(2020년) 코로나 관련 부록 설문 중 코로나 19로 인한 생활 및 인식 변화 데이터</li>
+        <li><b>데이터 형태:</b>csv</li>
+        <li><b>데이터 크기:</b>2822.9 KB</li>
+        <li><b>사용할 데이터 범위</b></li>
+            <ul>
+                <li>걱정 정도 데이터 사용</li>
+            </ul>
+        <li><b>데이터 수집 & 데이터 분석 시스템 구축:</b> Colab Notebook</li>
+        <li><b>시각화 툴:</b> Matplotlib</li>
+    </ul>
+
+    </br>
+    </br>
+    </br>
+
+    <h3>분석 결과</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+    <h4><a href="https://github.com/annyie52/Data-Analyze/blob/master/%EC%BD%94%EB%A1%9C%EB%82%98%EC%99%80_%EA%B2%BD%EC%A0%9C_%EC%8B%AC%EB%A6%AC_%EC%A7%80%EC%88%98%EC%99%80%EC%9D%98_%EA%B4%80%EA%B3%84.ipynb">python 코드</a></h4>
+
+    {% load static %}
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_1.png' %}">
+    </div>
+
+    </br>
+    </br>
+
+    <ul>
+        <li>분석 결과 <b>사람들은 생각보다 그렇게까지 엄청 걱정하면서 살고 있지 않다는 것을 알 수 있다.</b></li>
+        <li>그나마 국가 경제 전반에 대해 가장 크게 걱정하고, 자신의 재정 상황이나 실업 같은 개인적인 부분에서는 크게 걱정하지 않는 것으로 나타난다.</li>
+        <li><b><span style="background-color: yellow;">가설 검증 : 가설과 어느정도 일치한다. 걱정을 하긴하지만 엄청나게 걱정하지는 않는다.</span></b></li>
+    </ul>
+    </br>
+
+    <h4 style="text-align : center;"><span style="color:navy;">국가 경제 전반에만 문제가 있고 개인의 재정 상황에는 문제가 없을까?</span></h4>
+
+    </br>
+    <ul>
+        <li>국가 경제에는 전반적으로 문제가 있을까?→ <span><b>가설 4-1</b></span></li>
+        <li>개인의 재정 상황에는 문제가 없을까? → <span><b>가설 4-2</b></span></li>
+        <li>사람들은 위축되지 않고 정상적으로 소비 생활을 하고 있는가? → <span><b>가설 4-3</b></span></li>
+    </ul>
+
+    </br>
+    </br>
+
+    <h3><span style="color: white; background-color: black;">가설 4-1 : 코로나로 인해 국가 경제 상태가 악화되었을 것이다.</span></h3>
+
+    <h3>데이터 수집</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+
+    <ul>
+        <li><b>데이터 출처:</b>한국은행경제통계시스템의 경제심리지수 데이터</li>
+        <li><b>데이터 형태:</b>csv</li>
+        <li><b>데이터 크기:</b>1.1 KB</li>
+        <li><b>사용할 데이터 범위</b></li>
+            <ul>
+                <li>전체</li>
+            </ul>
+        <li><b>데이터 수집 & 데이터 분석 시스템 구축:</b> Colab Notebook</li>
+        <li><b>시각화 툴:</b> Matplotlib</li>
+    </ul>
+
+    </br>
+    </br>
+    </br>
+
+    <h3>분석 결과</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+    <h4><a href="https://github.com/annyie52/Data-Analyze/blob/master/%EC%BD%94%EB%A1%9C%EB%82%98%EC%99%80_%EA%B2%BD%EC%A0%9C_%EC%8B%AC%EB%A6%AC_%EC%A7%80%EC%88%98%EC%99%80%EC%9D%98_%EA%B4%80%EA%B3%84.ipynb">python 코드</a></h4>
+    <p><span style="background-color:orange;">국가 경제 상태를 분석하기는 힘드니 경제심리지수를 분석했다.</span></p>
+    </br>
+    {% load static %}
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_2.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">경제 심리 지수: 100보다 높으면 소비자와 기업이 경제 상황을 이전보다 나아졌다고, 낮으면 그렇지 않다고 여긴다는 뜻</span></p>
+    </div>
+
+    </br>
+    </br>
+
+    <p><span><b>분석은 한국은행 경제 심리 지수 보도 자료 설명를 참고하였다.</b></span></p>
+
+
+    <ul>
+        <li><b>2019년도 말</b>에 경제 심리 지수가 낮은 이유는 <b>미중 무역전쟁, 일본과의 무역 갈등</b> 등 대내외 이슈로 <b>하락한 코스피 지수</b>와 <b>강도 높은 부동산 규제 정책</b> 때문이다.</li>
+        <li>해당 그래프에서 <b>경제 심리 지수가 제일 낮은 2020-04월</b></li>
+        <ul>
+            <li>코로나 바이러스로 인해 <b>경기 악화</b>, 정부의 코로나 정책으로 인한 <b>생활 변화</b>, 수출 비율이 높은 <b>중국 시장의 경제가 먼저 코로나로 타격을 입었기 때문에</b> 이에 영향을 받았다.</li>
+            <li>거리두기에 따른 사람들의 이동량 감소가 경제 상황에 영향을 줬을까? → <span><b>가설 4-4</b></span></li>
+        </ul>
+        <li><b>2020년 5월경</b>부터 <b>경제심리지수가 계속 상승</b>한다.</li>
+        <li>기업 체감 경기가 괜찮아져서이다.</li>
+        <li>2021년 말부터 하락 이유</li>
+        <ul>
+            <li><b>오미크론 영향, 원자재 가격 상승 부담을 꼽을 수 있다.</b></li>
+        </ul>
+        <li><b><span style="background-color: yellow;">가설 검증 : 일부 일치한다. 2020년도 초반에는 첫 코로나 유행으로 기업이나 개인이 경제 상황이 안 좋다고 느꼈지만, 시간이 지날수록 점차 회복되는 것을 볼 수 있다. 그러므로 코로나로 인해 국가 경제 상태가 나빠졌다고 볼 수 있는 건 2020-05월 정도까지이다.</span></b></li>
+    </ul>
+
+    </br>
+    </br>
+
+    <h3><span style="color: white; background-color: black;">가설 4-2 : 코로나로 인해 부채가 증가하여 개인의 재정 상태가 악화되었을 것이다.</span></h3>
+
+    <h3>데이터 수집</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+
+    <ul>
+        <li><b>데이터 출처:</b></li>
+        <ul>
+            <li>한국은행경제통계시스템의 가구특성별 자산, 부채 데이터</li>
+            <li>한국노동패널조사 가구데이터 중 개인 금융자산, 부채 데이터</li>
+            <li>한국노동패널조사 22차, 23차 가구 데이터 설문 조사</li>
+        </ul>
+        <li><b>데이터 형태:</b>csv</li>
+        <li><b>데이터 크기:</b>51.0 KB , 18699.4 KB, 2741.8 KB</li>
+        <li><b>사용할 데이터 범위</b></li>
+            <ul>
+                <li>가구 특성별 자산, 부채 데이터</li>
+                <ul>
+                    <li>평균 자산, 평균 부채 데이터 사용</li>
+                </ul>
+            </ul>
+
+            <ul>
+                <li>가구 데이터</li>
+                <ul>
+                    <li>총 금융자산, 총 부채, 부채를 지게된 이유 데이터 사용</li>
+                    <li>코로나 이후 정부 지원금 활용 정도 데이터 사용</li>
+                </ul>
+            </ul>
+        <li><b>데이터 수집 & 데이터 분석 시스템 구축:</b> Colab Notebook</li>
+        <li><b>시각화 툴:</b> Matplotlib-line plot, count plot, pie chart, bar plot</li>
+    </ul>
+
+    </br>
+    </br>
+    </br>
+
+    <h3>분석 결과</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+    <h4><a href="https://github.com/annyie52/Data-Analyze/blob/master/%EC%BD%94%EB%A1%9C%EB%82%98%EC%99%80_%EA%B2%BD%EC%A0%9C_%EC%8B%AC%EB%A6%AC_%EC%A7%80%EC%88%98%EC%99%80%EC%9D%98_%EA%B4%80%EA%B3%84.ipynb">python 코드</a></h4>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_3.png' %}">
+    </div>
+
+    </br>
+    <ul>
+        <li>년도별로 <b>전체적인 흐름</b>을 봤을때 <b>부채 증가율이 자산 증가율보다 크지 않다.</b></li>
+    </ul>
+
+    </br>
+    <p><span style="background-color:orange;">부채 증가율만 세분화해서 보면</span></p>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_4.png' %}">
+    </div>
+
+    </br>
+
+    <ul>
+        <li>코로나의 영향을 받은 2020년 2021년 둘 다 전년 대비 부채 증가율이 다른 년도에 비해서 엄청 높은 편은 아니다.</li>
+        <li>지표상으로 보면 가계 부채가 코로나라는 특수 상황에도 불구하고 그렇게 크게 증가하지 않았기에 <b>코로나로 인해 개인의 재정 상태가 나빠졌다고 볼 수 없다.</b></li>
+        <li><b><span style="background-color: yellow;">가설 검증 : 가설과 일치하지 않는다.</span></b></li>
+    </ul>
+
+    </br>
+    </br>
+    <p><span style="background-color:orange;">부채를 진 이유를 확인해 보면</span></p>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_5.png' %}">
+    </div>
+
+    </br>
+
+    <ul>
+        <li>시각화를 했을 때 거리 두기 실행 여부에 따라 그나마 뚜렷한 차이를 보이는 부분은 생활비 부분이다.</li>
+        <li><b>생활비</b> 부분이 거리두기 이행 이전보다 시행 이후에 <b>줄어든 이유</b>는 <b>정부 지원금 중 생활비 지원 때문일 것</b>으로 예상된다.</li>
+        <ul>
+            <li>부채가 있음에도 재정상황에 대해 크게 걱정하지 않는 이유는 생활비 지원 때문일 것으로 추측된다.</li>
+        </ul>
+    </ul>
+
+    </br>
+    </br>
+    <p><span style="background-color:orange;">코로나 발생 이후 정부 지원금의 성격을 확인해보면</span></p>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_6.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">정부 지원금 성격별 비중</span></p>
+    </div>
+
+    </br>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_7.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">정부 지원금 성격별 지원 금액</span></p>
+    </div>
+
+    </br>
+    <ul>
+        <li>코로나 이후 지급된 정부 지원금 현황을 보면 개인이 <b>정부 지원금 중에 생활비 지원을 가장 많이 받은 것</b>을 알 수 있다.</li>
+        <ul>
+            <li>생활비 지원금이 재정 상황이 나아지는 거에 도움을 줬다는 사실을 알 수 있다.</li>
+        </ul>
+    </ul>
+
+    </br>
+    </br>
+    <h3><span style="color: white; background-color: black;">가설 4-3 : 코로나로 인해 개인의 소비가 위축되었을 것이다.</span></h3>
+
+    <h3>데이터 수집</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+
+    <ul>
+        <li><b>데이터 출처:</b></li>
+        <ul>
+            <li>한국은행경제통계시스템의 신용카드 전체 이용건수 데이터</li>
+            <li>한국은행경제통계시스템의 뉴스심리지수 데이터</li>
+            <li>한국은행경제통계시스템의 신용카드 지역별 월간 일평균 데이터(만원단위)</li>
+            <li>한국은행경제통계시스템의 신용카드 지역별 월간 일평균 데이터(원단위)</li>
+            <li>KOSIS 국가통계포털의 온라인 쇼핑몰 거래액 데이터</li>
+        </ul>
+        <li><b>데이터 형태:</b>xls, csv, xlsx</li>
+        <li><b>데이터 크기:</b>51.0 KB , 16.0 KB, 229 KB, 210 KB</li>
+        <li><b>사용할 데이터 범위</b></li>
+            <ul>
+                <li>신용카드 전체 이용건수 데이터</li>
+                <ul>
+                    <li>개인 할부 구매 이용금액, 개인 현금서비스 이용금액 합계 (백만원 단위)</li>
+                </ul>
+            </ul>
+        <li><b>데이터 수집 & 데이터 분석 시스템 구축:</b> Colab Notebook</li>
+        <li><b>시각화 툴:</b> Matplotlib</li>
+    </ul>
+
+    </br>
+    </br>
+    </br>
+
+    <h3>분석 결과</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+    <h4><a href="https://github.com/annyie52/Data-Analyze/blob/master/%EC%BD%94%EB%A1%9C%EB%82%98%EC%99%80_%EA%B2%BD%EC%A0%9C_%EC%8B%AC%EB%A6%AC_%EC%A7%80%EC%88%98%EC%99%80%EC%9D%98_%EA%B4%80%EA%B3%84.ipynb">python 코드</a></h4>
+    <p><span style="background-color:orange;">거리두기 시행 여부에 따른 월별 신용카드 이용 금액</span></p>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_8.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">개인 신용카드 이용금액 합계, 개인할부구매 이용금액 합계, 개인 현금서비스 이용금액 합계</span></p>
+    </div>
+
+    </br>
+    <ul>
+        <li><b>코로나 발생 이후 초반</b>에는 개인 신용카드 이용 금액이 <b>주춤</b>했지만, <b>그 이후</b>에는 <b>증가세</b>를 보이고 있다.</li>
+        <li><b><span style="background-color: yellow;">가설 검증 : 일부 일치한다.</span></b></li>
+    </ul>
+
+    </br>
+    </br>
+    <h4 style="text-align : center;"><span style="color:navy;">신용카드 이용 금액과 경제 심리 지수, 뉴스 심리 지수 사이에는 상관이 있을까?</span></h4>
+    <p><span style="background-color:orange;">신용카드 이용금액과 경제심리지수, 뉴스심리지수의 상관관계를 확인해 보면</span></p>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_9.png' %}">
+    </div>
+
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_10.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">뉴스 심리지수 수치가 높을수록 경제에 대한 기대가 높은 것</span></p>
+    </div>
+
+    </br>
+    <ul>
+        <li><b>신용카드 이용 금액 합계</b>와 <b>경제 심리 지수</b>는 어느 정도의 <b>양의 상관관계</b>가 있다고 말할 수 있다.</li>
+        <li>신용카드 이용 금액 중 특히 <b>할부 구매 이용</b>과 <b>경제 심리 지수</b>가 <b>양의 상관관계가 강하다는</b> 사실을 알 수 있다.</li>
+        <li>경제적 사정이 좋아야지 할부 구매를 많이 이용하고 할부 구매를 많이 이용한다는 건 경제 사정이 나쁘지 않다는 것을 뜻한다.</li>
+        <li>신용카드 이용 금액 합계와 뉴스 심리 지수의 상관관계는 신용카드 이용 금액 합계와 경제 심리 지수 상관관계보다 약한 모습을 보여 주고 있는데,  뉴스 심리 지수가 실제 경제에 반영되기까지 2~3달이 걸리기 때문이다.</li>
+    </ul>
+
+    </br>
+    </br>
+    <p><span style="background-color:orange;">개인의 소비가 위축되었는지 자세히 확인해보기 위해 신용 카드 매출 데이터를 확인해본다.</span></p>
+
+    </br>
+    </br>
+    <h3><span style="color: white; background-color: navy;">총 카드 매출액 (지역, 업종 다 합해서 확인)</span></h3>
+    <h4><a href="https://github.com/suyeee/Visualization-Project/blob/master/%EC%B4%9D_%EC%B9%B4%EB%93%9C_%EB%A7%A4%EC%B6%9C%EC%95%A1(%EC%A7%80%EC%97%AD%2C%EC%97%85%EC%A2%85_%EB%8B%A4_%ED%95%A9%ED%95%B4%EC%84%9C_%ED%99%95%EC%9D%B8).ipynb">python 코드</a></h4>
+    </br>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_11.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">월별 총매출액 변화율 그래프 (매출액,만원단위)</span></p>
+    </div>
+
+    </br>
+
+    <ul>
+        <li>월별 총매출액 변화율 그래프 (매출액,만원단위)에서 볼수있듯 <b>거리두기 첫 시행기간(2020-02-29~)</b>에 전국적으로 <b>매출액이 대폭 하락</b>했다. 표1에서 매출액 하위 1위를 차지할정도로 2020년 3월에 매출이 확 떨어졌다.</li>
+        <li>카드 매출액이 시간이 갈수록 높아지고 있다</li>
+        <li>21년 1월경 부터 21년 7월경 까지 매출 회복세를 넘어 코로나가 없던 거리두기 이전보다 오히려 매출이 증가하는 추세를 보이나 싶더니 21년 8월경 매출이 갑자기 뚝 떨어졌다.</li>
+        <ul>
+            <li>21년 7월~ 21년 12월은 코로나 제4차 대유행 기간이였다. 첫 일일 확진자수 2,000~7,000명대를 돌파한 대유행시기(국내 대유행중 두번째로 큰 대유행 사태였다.)였고 전국적으로 델타변이가 확산되었던 시기이다.</li>
+            <li>연이어 일어나는 집단감염들과 자가격리 및  외출자제로 인해 전국적으로 매출이 감소한 현상으로 보여진다.</li>
+        </ul>
+        <li>전체 매출 데이터중 <b>가장 높은 매출액</b>을 기록한 시기는 <b>21년 11월경</b>이다.</li>
+        <ul>
+            <li>제일 peak 를 찍은 2021-10 ~ 2021-11 월은 <b>상생소비지원금 시행기간</b>이였다. 그에따른 소비자들의 카드사용액 증가로 보여진다.</li>
+            <li>상생소비지원금 <blockquote>지역경제 활성화와 소비회복 촉진을 위해 신용 또는 체크카드를 2분기 월평균 사용액보다 3% 많이 쓰면, 3%를 넘는 증가분의 10%를 1인당 월 10만원까지 현금성 충전금으로 환급해 주는 사업</blockquote> </li>
+        </ul>
+    </ul>
+
+    </br>
+    </br>
+    <h3><span style="color: white; background-color: navy;">지역별 카드 매출액</span></h3>
+    <h4><a href="https://github.com/helloitsmimi/helloitsmimi/blob/master/%EC%9D%B4%EB%8F%99%EB%8D%B0%EC%9D%B4%ED%84%B0%2C_%EB%A7%A4%EC%B6%9C%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%83%81%EA%B4%80%EA%B4%80%EA%B3%84.ipynb">python 코드</a></h4>
+    </br>
+    <h3>전체 지역</h3>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_12.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">서울과 광역시에 해당하는 지역만 확인해본 그래프</span></p>
+    </div>
+
+    </br>
+
+    <h3>서울</h3>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_13.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">서울의 월별 총 매출액 그래프</span></p>
+    </div>
+
+    </br>
+    <ul>
+        <li>사회적 거리두기가 시작된 <b>2020년 3월에 급감</b></li>
+        <li>다음 달인 <b>2020년 4월 이후 다시 회복</b>하며 사회적 <b>거리두기 시행 전보다 매출액 증가</b></li>
+        <li>전체적으로 우상향 그래프</li>
+    </ul>
+
+    </br>
+
+    <h3>서울 외 지역</h3>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_14.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">서울 외 지역들의 월별 총 매출액 그래프</span></p>
+    </div>
+
+    </br>
+    <ul>
+        <li>사회적 거리두기가 시작된 <b>2020년 3월에 급감</b></li>
+        <li>다음 달인 2020년 4월 이후 다시 증가하는 모습을 보이나, 대체로 <b>사회적 거리두기 전보다 매출액이 감소함</b></li>
+    </ul>
+
+    </br>
+    </br>
+    <h3><span style="color: white; background-color: navy;">업종별 카드 매출액</span></h3>
+    <h4><a href="https://github.com/suyeee/Visualization-Project/blob/master/%EC%97%85%EC%A2%85%EB%B3%84_%EC%B9%B4%EB%93%9C_%EB%A7%A4%EC%B6%9C%EC%95%A1_(%ED%81%B0_%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC%EB%B3%84%EB%A1%9C).ipynb">python 코드</a></h4>
+    </br>
+    <h3>큰 카테고리별로 확인</h3>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_15.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">업종별 신용카드 매출액 (매출액, 만원단위)</span></p>
+    </div>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_16.png' %}" style="width: 80vw; min-width: 150px;">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">업종별 매출 증감률</span></p>
+    </div>
+
+    </br>
+
+    <ul>
+        <li>거리두기 시행 후(on) 매출이 감소한 업종들 중에 <b>여행/ 교통 업종의 매출 감소율이 가장 크다.</b></li>
+        <li><b>증가율이 제일 높은 업종</b>은 <b>전자상거래/ 통신판매</b>이다. 이것도 온라인(비대면) 배달주문 시스템이 확장됨에 따라 증가한 것으로 보여진다.</li>
+        <ul>
+            <li>뉴스 기사
+            <blockquote>거리두기 강화에 온라인 장보기 급증... 품절 속출</blockquote><blockquote>코로나 재확산에 따른 사회적 거리두기 강화로 외식 대신 온라인 식재료 쇼핑이 늘며 주요 온라인 쇼핑몰에서 식재료 품절이 반복되고 있습니다.</blockquote>
+            </li>
+        </ul>
+        <li>교육 업종의 매출 감소는 교육환경이 점점 온라인 교육으로 전환됨으로서 발생한 현상으로 보여진다.</li>
+        <ul>
+            <li>온라인 교육의 강의 결제비용은 전자상거래 업종으로 매출액이 들어간다.</li>
+        </ul>
+        <li>의류/잡화 업종의 매출감소 역시 거리두기로 인해 발생한 것으로 보인다</li>
+        <ul>
+            <li>자가격리나 거리두기 정책으로 인해 외출할 일이 적어지니 옷이나 화장품, 악세사리같은 필수 소비재가 아닌 업종에 대한 소비자의 지출이 감소한것으로 보여진다.</li>
+            <li>거리두기로 인해 임금이 적어진 경우(실업자, 코로나 확진자로 인한 휴무 등등)  적어진 임금으로 생활해야하므로 생활 필수소비재에 해당하지 않는 소비재에 대한 소비가 줄어들었을 것으로 예상된다.<blockquote>[뉴스기사] 서울대의 한 연구팀에 따르면 잠재 실업자를 포함하는 실업자의 28%가 코로나19로 실직하였고 41%가 경제적 위기를 경험하였고 48%가 극단적 선택을 고려하였다. 특히 자영업자의 피해가 심하다. 고용 회복세에도 자영업자는 1년 전 보다 불과 6만 명 늘어났다. 전체 취업자에서 자영업자가 차지하는 비중은 통계청 공식 통계에서 처음으로 20% 밑으로 떨어졌다. 늘어났다고는 하나 자영업자 수는 2020년 3월과 비교하면 줄어들었다. 직원을 둔 자영업자가 지난 해 11월까지 36개월 연속 감소하였다.</blockquote></li>
+        </ul>
+        <li>숙박/음식, 오락/문화, 여행/교통의 경우도 일상생활을 하는데 있어 꼭 필요하지않은 업종들 이기도하고 거리두기와 사적모임 금지로 인해 매출이 감소했을 것으로 예상된다.</li>
+        <li><b>자동차 업종</b>의 <b>매출 증가</b>는 확진자와의 접촉에 대한 소비자들의 걱정, 두려움이 만들어낸 결과로 예상된다.</li>
+        <ul>
+            <li>많은 인원이 함께 이용해야하는 <b>대중교통 업종</b>은 여행/ 교통 카테고리에 포함되어있는데 여행/교통 카테고리의 평균 매출액은 off 시기와 비교했을 때 <b>크게 감소</b>했고 그에 반해 자동차 업종의 평균 매출액 증가율은 증가율 순위 2위를 차지할만큼 높다.</li>
+        </ul>
+    </ul>
+
+    </br>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_17.png' %}">
+    </div>
+
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_18.png' %}">
+    </div>
+
+    </br>
+    </br>
+
+    <h3>작은 카테고리별로 확인</h3>
+    <h4><a href="https://github.com/suyeee/Visualization-Project/blob/master/%EC%97%85%EC%A2%85%EB%B3%84_%EC%B9%B4%EB%93%9C_%EB%A7%A4%EC%B6%9C%EC%95%A1(%EC%9E%91%EC%9D%80_%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC).ipynb">python 코드</a></h4>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_19.png' %}" style="width: 80vw; min-width: 150px;">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">작은 카테고리 전체의 업종별 off 시기 매출비중 그래프</span></p>
+    </div>
+    </br>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_20.png' %}" style="width: 80vw; min-width: 150px;">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">작은 카테고리 전체의 업종별 on 시기 매출비중 그래프</span></p>
+    </div>
+
+    </br>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_21.png' %}" style="width: 80vw; min-width: 150px;">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">작은 카테고리별로 매출비중 변화정도를 나타낸 그래프 (on-off)</span></p>
+    </div>
+
+    </br>
+    </br>
+    <ul>
+        <li>작은 카테고리별로 확인한 그래프에서 <b>매출비중이 가장 많이 감소</b>한 업종은 <b>‘음식점’</b> 이다.</li>
+        <li>일반병의원, 종합병원의 경우도 감소폭이 그렇게 크지는 않지만 감소했다.</li>
+        <ul>
+            <li>감기에 자주 걸려 병원을 1년에 3번이상은 방문하는 사람들도 코로나 유행으로 인해 마스크를 쓰다보니 감기에 잘 안걸리게 되어 병원 방문율이 줄었고 그로인한 매출 감소로 보여진다.
+            <blockquote>코로나19 판데믹으로 인해 이비인후과가 경영상 큰 어려움을 겪게 됐다는 것. 코로나19 사태로 21년 4월 진료비 증감률은 이비인후과가 작년 동월 대비 46% 감소하였고 처방건수로는 60% 넘게 감소한 상태다.</blockquote>
+                <blockquote>이비인후과 개원의 528명을 대상으로 실시한 설문조사 결과를 살펴보면, 작년 동월 대비 40-80%의 매출감소를 93%(491명)의 응답자가 응답했고 56%(295명)의 응답자는 내원환자 감소율이 60%가 넘어 심각한 경영상 어려움을 겪고 있다고 응답했다.</blockquote>
+                <blockquote>출처 : 의약뉴스 <a href="http://www.newsmp.com">(http://www.newsmp.com)</a></blockquote>
+            </li>
+            <li>이비인후과 외에도 다른 병원들의 경우에도 코로나 백신접종을 위해 병원을 방문하는 사람이 많아 사람이 항상 몰려있어 꼭 병원을 가서 진료를 받아야 하는 상황이 아니면 가급적 병원에 방문해 진료를 받는 일이 줄어든 것으로 보인다.</li>
+            <li>비대면 진료의 경우 22년 03월경에 시행되기 시작했다. 데이터에는 22년 01월 까지만 있어 비대면 진료의 매출은 잡히지 않은것으로 보인다.</li>
+        </ul>
+        <li><b>‘항공사’</b>의 경우 <b>매출 비중 감소 2위</b>를 차지한다.</li>
+        <li><b>'국산자동차신품’</b> 업종은 거리두기 이전에 비해 <b>매출 비중</b>이 <b>0.7 상승</b>했다. (3.4%→4.1%)</li>
+        <li><b><span style="background-color: yellow;">가설 검증 : 일부는 일치함. 개인의 소비가 일부 위축된 업종들도 있지만 오히려 거리두기 이전보다 카드 매출이 더 증가한 업종도 많았다.</span></b></li>
+    </ul>
+
+    <p><span style="background-color:orange;">거리두기 on 과 거리두기 off 시기 전부 전자상거래 매출이 1위였으니 전자상거래 매출을 더 확인해보면</span></p>
+    </br>
+    <h3>월별 전자상거래 이용량 추세</h3>
+    <h4><a href="https://github.com/eunashin/TIL/blob/master/%EC%8B%A0%EC%9A%A9%EC%B9%B4%EB%93%9C%EC%A0%84%EC%9E%90%EC%83%81%EA%B1%B0%EB%9E%98_%ED%95%AD%EB%AA%A9_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EB%B6%84%EC%84%9D.ipynb">python 코드</a></h4>
+    </br>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_22.png' %}">
+    </div>
+
+    </br>
+    <ul>
+        <li>코로나 발생 시기인 2019-01에는 24,501,405만원으로, 거리두기가 끝난 2022-01은 42,458,596만원으로  73.2% 성장률을 보인다.</li>
+        <li>→ 첫 코로나 확진자 발생 2020-01월, 거리두기 첫시행 2020-02-29</li>
+        <ul>
+            <li>전자상거래/통신판매의 소비이용량(매출액)은 계속 증가하는 추세이다.</li>
+        </ul>
+    </ul>
+
+    </br>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_23.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_24.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">온라인 소비 전월대비 증감율 데이터프레임 (2019.01 ~ 2022.01)</span></p>
+    </div>
+
+    </br>
+    </br>
+
+    <h3>거리두기 시행기간 (on) 일때와 거리두기 시행 이전(off) 의 전자상거래 이용량(매출액) 비교</h3>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_25.png' %}">
+    </div>
+
+    </br>
+    <ul>
+        <li>거리두기OFF 기간 시 전자상거래 이용량은 <b>26.1%의 상승세를 보인다.</b></li>
+    </ul>
+
+    </br>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_26.png' %}">
+    </div>
+    </br>
+    <ul>
+        <li>거리두기ON 기간 시 전자상거래 이용량은 <b>45%의 상승세를 보인다.</b></li>
+    </ul>
+
+    </br>
+    </br>
+
+    <h3>거리두기 시행기간 (on) 일때와 거리두기 시행 이전(off) 의 전자상거래 매출액 상위업종</h3>
+    <h4><a href="https://github.com/eunashin/TIL/blob/master/%EC%98%A8%EB%9D%BC%EC%9D%B8%EC%86%8C%EB%B9%84%EC%97%85%EC%A2%85_%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D.ipynb">python 코드</a></h4>
+    </br>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_27.png' %}">
+    </div>
+
+    </br>
+    <ul>
+        <li>코로나 이전에는 온라인 소비 형태의 대부분이 여행/교통서비스를 이용하기 위해 사용하였음을 알 수 있음</li>
+        <ul>
+            <li>여행 및 교통서비스는 항공권, 교통티켓(버스·기차), 렌터카, 숙박시설 등을 포함</li>
+        </ul>
+    </ul>
+
+    </br>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_28.png' %}">
+    </div>
+
+    <ul>
+        <li>[온라인쇼핑 판매매체별 상품별거래액] 데이터를 통해 ‘거리두기ON’과 ‘거리두기OFF’의 상위 소비 업종이 차이를 보이는데, <b>여행 및 교통서비스와 음/식료품 업종의 변화</b>가 크게 보여진다.</li>
+        <li>거리두기OFF 때 가장 많이 소비한 업종인 여행 및 교통서비스는 거리두기ON시기에 크게 하락하였는데, 이는 이동 범위가 제한되며 해당 항목의 소비가 축소 되었다고 볼 수 있다.</li>
+        <li>따라서 <b>오프라인 생활 영역은 축소</b>되었지만, <b>온라인 상에서</b> 개인의 삶을 영위할 수 있는 방식과 범위가 다양해졌음을 볼 수 있다. 특히 음/식료품과 음식서비스가 눈에 띄게 성장하였다.</li>
+        <ul>
+            <li>이는 식생활 라이프스타일의 큰 변화를 반영 하였는데 안전지향, 편의지향, 맛지향, 경제지향 요인이 개인의 삶에 영향을 미친 것으로 보인다.</li>
+        </ul>
+        <li>거리두기 이후 <b>음・식료품</b>과 <b>음식서비스</b>의 온라인 이용이 <b>크게 증가</b>하였는데, 이는 이동량 제한으로 오프라인 생활 반경은 좁아졌지만, 온라인상에서의 생활 반경은 넓어졌음을 의미한다.</li>
+        <li>새벽배송, 당일배송 등 음・식료품을 신선하게 구매할 수 있는 e커머스 시장의 활성화 역시 해당 업종의 소비량을 증가시킨 원인이라 볼 수 있다.
+        <blockquote>온라인 장보기 침투율은 2020년 21.3%에서 2023년 30%, 2025년 40%까지 확대될 것으로 추정된다. 실제 올해 10월 누적 온라인 식품 거래액은 전년 대비 29.5% 성장한 27조원을 기록했다. 정소연 연구원은 "침투율은 25.1%까지 상승해 온라인 식품의 성장은 코로나19에 따른 일시적 수혜가 아닌 방향성"이라며 "이커머스 업체들에게 점유율 확대의 기회라고 판단된다"고 설명했다.</blockquote></li>
+        <li>거리두기 이후 <b>e쿠폰서비스의 업종</b>이 <b>새롭게 등장</b>하였다. 이는 비대면으로 만남이 이루어지는 메신저를 통한 온라인쇼핑 및 선물하기 사용액으로 <b>새로운 형태의 소비활동이 성행</b>하기 시작했다.</li>
+    </ul>
+
+    </br>
+    </br>
+    <h3>음/식료품 및 음식서비스의 이용증가</h3>
+    </br>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_29.png' %}">
+    </div>
+    </br>
+    <ul>
+        <li>음/식료품은 온라인 장보기를, 음식 서비스는 배달서비스를 지칭한다.</li>
+        <li><b>코로나 이후 식품 부문</b>의 온라인 시장 <b>성장 속도가 가파름</b>을 확인할 수 있다. 식품은 전통적으로 온라인 침투율이 가장 낮았던 항목으로, 소비자들은 ‘신선도에 대한 신뢰’ 때문에 식품만큼은 오프라인 매장에서 구매하고자 하는 성향이 강했다.</li>
+        <li>그러나 코로나와 거리두기 이후 <b>식품을 온라인에서 구매한 소비자가 증가</b>하였는데, 이는 소비시장과 소비자 행동변화에 큰 변화를 가지고 왔다.
+        <blockquote>식품 구매 온라인 이동 가속…“거리 두기 이후에도 이용” 86%, 식음료 온라인 쇼핑 횟수 작년 29% 증가에 지출액27% 증가…메타버스로 판매채널 다변화를 컵밥·즉석스프·비스킷바 등 간편식 인기 (출처 :[식품음료신문])</blockquote></li>
+    </ul>
+
+    </br>
+    </br>
+    <p><span style="background-color:orange;">업종별 매출 증감률에서 증가율 순위 2위를 차지한 자동차 매출도 자세히 확인해 보면</span></p>
+    </br>
+    <h3>자동차 매출량 변화</h3>
+    <h4><a href="https://github.com/helloitsmimi/helloitsmimi/blob/master/%EA%B1%B0%EB%A6%AC%EB%91%90%EA%B8%B0_%EC%A0%84_%ED%9B%84_%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8_%EC%9D%B4%EC%9A%A9_%EB%B3%80%ED%99%94.ipynb">python 코드</a></h4>
+    </br>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_30.png' %}">
+    </div>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_31.png' %}">
+    </div>
+    </br>
+    <ul>
+        <li>지역별 매출량과 총 매출량 모두 2020년 3월, 202년 9월에 큰 증가폭을 보임</li>
+        <li>사회적 거리두기가 시행된 2020년 3월 전보다 <b>대체로 매출량이 증가</b>함</li>
+    </ul>
+
+    </br>
+    </br>
+    <h3>대중교통 이용량 변화</h3>
+    </br>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_32.png' %}">
+    </div>
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">2019/01 ~ 2022/01 동안의 지역별 대중교통(버스, 지하철) 이용량 시계열 그래프</span></p>
+    </div>
+    </br>
+    <ul>
+        <li>사회적 거리두기가 시작된 <b>2020/03에 눈에 띄게 감소</b></li>
+        <li>이후 증가하다가 <b>2020/08, 2020/09에 다시 감소</b></li>
+        <ul>
+            <li>8.15 서울도심 집회 관련으로 집단감염 증가와 관련 있을 것으로 예상</li>
+        </ul>
+        <li><b>2020/12에 눈에 띄게 감소</b></li>
+        <ul>
+            <li>5인이상 집합 금지 등 사회적 거리두기 정책과 관련있을 것으로 예상</li>
+        </ul>
+    </ul>
+
+    </br>
+    </br>
+
+    <h3>전국 자동차 매출량 & 전국 대중교통 이용량 비교</h3>
+    </br>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_33.png' %}">
+    </div>
+    </br>
+    <ul>
+        <li>사회적 거리두기를 시작한 <b>2020/03을 기준</b>으로 <b>자동차 매출량은 급증</b>하고 <b>대중교통 이용랑은 급감</b>함</li>
+        <li>2020/09 또한 자동차 매출량은 늘고 대중교통 이용량은 급감함, 확진자 수가 급증했던 2020/08의 영향으로 예상</li>
+        <li>2020/03을 기준으로 자동차 매출량은 전보다 증가했고, 대중교통 이용량은 전보다 감소함</li>
+    </ul>
+
+    </br>
+    </br>
+    <h3>사회적 거리두기 전후 대중교통 월평균 이용량 지역별 비교</h3>
+
+    </br>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_34.png' %}">
+    </div>
+    </br>
+
+    <ul>
+        <li><b>모든 지역에서 감소함</b></li>
+        <li><b>서울, 부산, 인천 순</b>으로 <b>감소폭이 큼</b></li>
+        <ul>
+            <li>인구 수와 관련있는 것으로 예상(2021년 6월 기준 한국 인구수 서울, 부산, 인천 순으로 多)</li>
+        </ul>
+    </ul>
+
+
+    </br>
+    </br>
+    <h3>사회적 거리두기 전후 대중교통 월평균 이용량 지역별 증감률</h3>
+
+    </br>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_35.png' %}">
+    </div>
+    </br>
+
+    <ul>
+        <li>월평균 거리두기 후 이용량 / 거리두기 전 이용량(2020/03 기준)</li>
+        <li><b>인천광역시, 대전광역시, 광주광역시 순</b>으로 <b>감소율이 큼</b></li>
+        <ul>
+            <li>평소 사람들이 이용하는 이동수단 중 대중교통 비율이 컸을 것으로 예상</li>
+        </ul>
+        <li><b>자동차 판매량</b>은 사회적 <b>거리두기가 시행되던 2020/3, 코로나 집단감염이 발생한 2020/9</b>에 눈에 띄게 <b>증가</b>하였다. 반면 <b>대중교통량</b>은 2020/3, 2020/9 시점에 <b>감소</b>했다.</li>
+        <li>2020/03을 기준으로, 자동차 판매량은 대체적으로 증가했고 대중교통량은 감소했다.</li>
+        <li>서울-부산-대구 순으로 대중교통 이용량 감소폭이 컸고, 인천-대전-광주 순으로 대중교통 이용량 감소율이 컸다. 이는 각각 인구 수, 이용하는 이동수단 비율의 영향으로 보인다.</li>
+    </ul>
+
+    </br>
+    </br>
+    <p><span style="background-color:#bfff00;">결론:  거리두기 on 시기(거리두기 시행)에 매출비중이 상위권을 차지하던 전자상거래(매출 1위 음식배달서비스), 자동차의 매출액은 늘었지만 그와 반대로 오프라인 음식점과 대중교통 매출액은 거리두기 시행후 감소하였다.</span></p>
+    <p><span style="background-color:#bfff00;">가설 검증 : 일부 일치하지만 거리두기로 인해 소비(카드 매출액)가 위축되었다고 하기는 어렵다.</span></p>
+    </br>
+    </br>
+
+    <h3><span style="color: white; background-color: black;">가설 4-4 : 거리두기에 따른 사람들의 이동량 감소가 경제 상황을 악화시켰을 것이다.</span></h3>
+
+    <h3>데이터 수집</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+
+    <ul>
+        <li><b>데이터 출처:</b></li>
+        <ul>
+            <li>한국 은행의 경제 심리 지수 데이터</li>
+            <li>통계청의 이동량 데이터</li>
+        </ul>
+        <li><b>데이터 형태:</b>csv, xlsx</li>
+        <li><b>데이터 크기:</b>1.1 KB, 15.0 KB</li>
+        <li><b>사용할 데이터 범위</b></li>
+            <ul>
+                <li>통계청 이동량 데이터</li>
+                <ul>
+                    <li>2019년~2022년 3월까지의 데이터를 합쳐서 사용</li>
+                </ul>
+            </ul>
+        <li><b>데이터 수집 & 데이터 분석 시스템 구축:</b> Colab Notebook</li>
+        <li><b>시각화 툴:</b> Matplotlib</li>
+    </ul>
+
+    </br>
+    </br>
+    </br>
+
+    <h3>분석 결과</h3>
+    <hr align="left" style="border: dashed 0.1px; width: 30%;">
+    <h4><a href="https://github.com/annyie52/Data-Analyze/blob/master/%EC%BD%94%EB%A1%9C%EB%82%98%EC%99%80_%EA%B2%BD%EC%A0%9C_%EC%8B%AC%EB%A6%AC_%EC%A7%80%EC%88%98%EC%99%80%EC%9D%98_%EA%B4%80%EA%B3%84.ipynb">python 코드</a></h4>
+    </br>
+    <p><span style="background-color:orange;">인구이동량과 경제심리지수의 상관관계</span></p>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_36.png' %}">
+    </div>
+    </br>
+    <ul>
+        <li>회귀 모형의 R-squared 0.02, <b>월별 이동량 총합의 p-value 0.427로 유의 수준 0.05에서 월별 이동량 총합이 경제 심리 지수에 미치는 영향은 거의 없다</b>고 볼 수 있다.</li>
+        <li><b><span style="background-color: yellow;">가설 검증 : 가설이 틀렸다. 사회적 거리두기는 경제 심리 지수에 영향을 미치는 변수가 아니다.</span></b></li>
+    </ul>
+
+    </br>
+    </br>
+    <p><span style="background-color:orange;">인구이동량과 신용카드 매출데이터의 상관관계</span></p>
+    </br>
+    <h3>지역별 이동량 변화</h3>
+    <h4><a href="https://github.com/helloitsmimi/helloitsmimi/blob/master/%EC%9D%B4%EB%8F%99%EB%8D%B0%EC%9D%B4%ED%84%B0%2C_%EB%A7%A4%EC%B6%9C%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%83%81%EA%B4%80%EA%B4%80%EA%B3%84.ipynb">python 코드</a></h4>
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_37.png' %}">
+    </div>
+
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">지역별 월별 이동량 그래프</span></p>
+    </div>
+
+    </br>
+    <ul>
+        <li><b>모든 지역</b>에서 <b>2~3달 주기로 피크</b>를 보임</li>
+        <li>따라서 2020년 3월의 이동량 감소가 사회적 거리두기 때문인지 알 수 없음</li>
+        <li>이동량과 매출 사이의 상관관계 분석 필요</li>
+    </ul>
+
+    </br>
+    </br>
+    <h3>지역별 인구이동량과 카드 매출액간의 상관관계 분석</h3>
+    <h4>1. 2019/01~2022/01</h4>
+
+    <ul>
+        <li>서울</li>
+    </ul>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_38.png' %}">
+    </div>
+
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">회귀 직선 그래프</span></p>
+    </div>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_39.png' %}">
+    </div>
+
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">단순선형회귀분석 결과</span></p>
+    </div>
+    </br>
+    <p>: R-squared=0.031, Adj.R-squared=0.003, p-value=0.301로 유의수준 0.05 하에서 <b>인구이동량이 매출량을 설명하는 변수라고 보기 어렵다.</b></p>
+
+    </br>
+    <ul>
+        <li>인천</li>
+    </ul>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_40.png' %}">
+    </div>
+
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">회귀 직선 그래프</span></p>
+    </div>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_41.png' %}">
+    </div>
+
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">단순선형회귀분석 결과</span></p>
+    </div>
+    </br>
+    <p>: R-squared=0.003, Adj.R-squared=-0.026, p-value=0.753으로 유의수준 0.05 하에서 <b>인구이동량이 매출량을 설명하는 변수라고 보기 어렵다.</b></p>
+
+    </br>
+    <ul>
+        <li>부산</li>
+    </ul>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_42.png' %}">
+    </div>
+
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">회귀 직선 그래프</span></p>
+    </div>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_43.png' %}">
+    </div>
+
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">단순선형회귀분석 결과</span></p>
+    </div>
+    </br>
+    <p>: R-squared=0.055, Adj.R-squared=0.028, p-value=0.163로 유의수준 0.05 하에서 <b>인구이동량이 매출량을 설명하는 변수라고 보기 어렵다.</b></p>
+
+    </br>
+    </br>
+    <h4>2. 2020/03~2022/01 (거리두기 기간 내)</h4>
+
+    <ul>
+        <li>서울</li>
+    </ul>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_44.png' %}">
+    </div>
+
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">회귀 직선 그래프</span></p>
+    </div>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_45.png' %}">
+    </div>
+
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">단순선형회귀분석 결과</span></p>
+    </div>
+    </br>
+    <p>: R-squared=0.037, Adj.R-squared=-0.009, p-value=0.380로 유의수준 0.05 하에서 <b>인구이동량이 매출량을 설명하는 변수라고 보기 어렵다.</b></p>
+
+    </br>
+    <ul>
+        <li>인천</li>
+    </ul>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_46.png' %}">
+    </div>
+
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">회귀 직선 그래프</span></p>
+    </div>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_47.png' %}">
+    </div>
+
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">단순선형회귀분석 결과</span></p>
+    </div>
+    </br>
+    <p>: R-squared=0.018, Adj.R-squared=-0.029, p-value=0.547로 유의수준 0.05 하에서 <b>인구이동량이 매출량을 설명하는 변수라고 보기 어렵다.</b></p>
+
+    </br>
+    <ul>
+        <li>부산</li>
+    </ul>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_48.png' %}">
+    </div>
+
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">회귀 직선 그래프</span></p>
+    </div>
+
+    <div style="text-align : center;">
+        <img src="{% static 'hy4_49.png' %}">
+    </div>
+
+
+    <div style="text-align : center;">
+        <p><span style="color:gray;">단순선형회귀분석 결과</span></p>
+    </div>
+    </br>
+    <p>: R-squared=0.003, Adj.R-squared=-0.045, p-value=0.817로 유의수준 0.05 하에서 <b>인구이동량이 매출량을 설명하는 변수라고 보기 어렵다.</b></p>
+
+    </br>
+    </br>
+    <ul>
+        <li><b><span style="background-color:yellow;">가설 검증: 가설이 틀림. 사회적 거리두기 시점을 기준으로 인구이동량과 매출량 모두 감소하긴 했으나, 인구이동량과 매출량 사이에 상관관계가 있다고 보기는 어렵다.</span></b></li>
+    </ul>
+
+
+</body>
+</html>
