@@ -41,6 +41,6 @@ def hy5(request):
 def insight(request):
     return render(
         request,
-        'blog/insights.html'
+        'blog/insight.html'
     )
 
